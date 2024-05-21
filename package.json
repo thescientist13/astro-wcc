@@ -1,0 +1,22 @@
+{
+  "name": "astro-wcc",
+  "description": "A demonstration repo for using Astro and WCC together",
+  "type": "module",
+  "version": "0.0.1",
+  "keywords": [
+    "Astro",
+    "WCC",
+    "SSR",
+    "Web Components"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.8.6"
+  }
+}
