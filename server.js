@@ -1,18 +1,17 @@
 import { renderFromHTML } from 'wc-compiler';
 
-// TODO handle this check without needing to manually import the component above
-async function check(tag) {
-  return true; // !!globalThis.customElements.get(tag);
+async function check(tagName) {
+  return tagName.indexOf('-') > 0; 
 }
 
 async function renderToStaticMarkup(tagName, props, slots) {
   console.log('renderToStaticMarkup', { tagName, props, slots })
   const cwdUrl = new URL(`file://${process.cwd()}/`);
+  const suffix = tagName.split('-')[1];
   const attributes = Object.entries(props).map(([key, value]) => ` ${key}="${value}"`).join('');
-  
-  // TODO support dynamic component loading
-  const { html } = await renderFromHTML(`<x-greeting ${attributes}></x-greeting>`, [
-    new URL('./src/components/greeting.js', cwdUrl)
+
+  const { html } = await renderFromHTML(`<${tagName} ${attributes}></${tagName}>`, [
+    new URL(`./src/components/${suffix}.js`, cwdUrl)
   ]);
   console.log({ html });
 
