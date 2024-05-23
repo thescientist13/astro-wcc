@@ -1,4 +1,3 @@
-import 'wc-compiler/src/dom-shim.js';
 import { renderFromHTML } from 'wc-compiler';
 
 // TODO handle this check without needing to manually import the component above
