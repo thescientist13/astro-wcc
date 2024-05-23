@@ -1,7 +1,3 @@
----
-
----
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -9,8 +5,11 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
-	</head>
+    <script src="../components/greeting.js"></script>
+  </head>
 	<body>
 		<h1>Astro</h1>
+    <x-greeting></x-greeting>
+    <x-greeting name="WCC"></x-greeting>
 	</body>
 </html>
