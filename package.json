@@ -17,6 +17,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.8.6"
+    "astro": "^4.8.6",
+    "wc-compiler": "^0.13.0"
   }
 }
