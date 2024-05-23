@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
-import wccSSR from './wcc-ssr.js';
+import astroWcc from '@projectevergreen/astro-wcc';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [ wccSSR() ]
+  integrations: [ astroWcc() ]
 });
