@@ -7,15 +7,12 @@ async function check(tag) {
 
 async function renderToStaticMarkup(tagName, props, slots) {
   console.log('renderToStaticMarkup', { tagName, props, slots })
-  const comp = customElements.get(tagName)
-  console.log({ comp })
-  // TODO handle resolving component definitions
-
+  const cwdUrl = new URL(`file://${process.cwd()}/`);
   const attributes = Object.entries(props).map(([key, value]) => ` ${key}="${value}"`).join('');
+  
   const { html } = await renderFromHTML(`<x-greeting ${attributes}></x-greeting>`, [
-    new URL('./src/components/greeting.js', import.meta.url)
+    new URL('./src/components/greeting.js', cwdUrl)
   ]);
-
   console.log({ html });
 
   return { html };

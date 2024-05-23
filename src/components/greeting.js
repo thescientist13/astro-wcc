@@ -10,6 +10,8 @@ export class Greeting extends HTMLElement {
 
       this.attachShadow({ mode: 'open' });
       this.shadowRoot.appendChild(template.content.cloneNode(true));
+    } else {
+      console.log('you should already have an SSR greeting!');
     }
   }
 }
