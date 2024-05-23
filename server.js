@@ -10,6 +10,7 @@ async function renderToStaticMarkup(tagName, props, slots) {
   const cwdUrl = new URL(`file://${process.cwd()}/`);
   const attributes = Object.entries(props).map(([key, value]) => ` ${key}="${value}"`).join('');
   
+  // TODO support dynamic component loading
   const { html } = await renderFromHTML(`<x-greeting ${attributes}></x-greeting>`, [
     new URL('./src/components/greeting.js', cwdUrl)
   ]);
