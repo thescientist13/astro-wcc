@@ -1,4 +1,4 @@
-export class Greeting extends HTMLElement {
+export default class Greeting extends HTMLElement {
   connectedCallback() {
     if(!this.shadowRoot) {
       const template = document.createElement('template');

@@ -1,6 +1,7 @@
 {
   "name": "astro-wcc",
   "description": "A demonstration repo for using Astro and WCC together",
+  "version": "1.0.0",
   "type": "module",
   "keywords": [
     "Astro",
@@ -16,7 +17,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@projectevergreen/astro-wcc": "~0.1.1",
-    "astro": "^4.8.6"
+    "@projectevergreen/astro-wcc": "~0.2.0",
+    "astro": "^5.16.6"
   }
 }
