@@ -1,15 +1,117 @@
+---
+// src/pages/index.astro
+---
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + WCC</title>
-    <script src="../components/greeting.js"></script>
-  </head>
+		<title>Astro + WCC Demo</title>
+		<style>
+			:root {
+				--bg-color: #0f172a;
+				--card-bg: #1e293b;
+				--text-main: #f8fafc;
+				--text-muted: #94a3b8;
+				--accent: #38bdf8;
+			}
+
+			body {
+				font-family: system-ui, -apple-system, sans-serif;
+				background-color: var(--bg-color);
+				color: var(--text-main);
+				margin: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+			}
+
+			main {
+				text-align: center;
+				padding: 2rem;
+				max-width: 800px;
+			}
+
+			h1 {
+				font-size: 3.5rem;
+				font-weight: 800;
+				margin-bottom: 0.5rem;
+				background: linear-gradient(45deg, #38bdf8, #818cf8);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			.subtitle {
+				color: var(--text-muted);
+				font-size: 1.25rem;
+				margin-bottom: 3rem;
+			}
+
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 1.5rem;
+				margin-bottom: 3rem;
+			}
+
+			.card {
+				background-color: var(--card-bg);
+				padding: 1.5rem;
+				border-radius: 12px;
+				box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+				transition: transform 0.2s;
+				border: 1px solid #334155;
+			}
+
+			.card:hover {
+				transform: translateY(-5px);
+				border-color: var(--accent);
+			}
+
+			.card h2 {
+				color: var(--accent);
+				font-size: 1.5rem;
+				margin-top: 0;
+			}
+
+			.btn {
+				display: inline-block;
+				background: var(--accent);
+				color: #0f172a;
+				padding: 0.8rem 2rem;
+				border-radius: 99px;
+				font-weight: bold;
+				text-decoration: none;
+				transition: opacity 0.2s;
+			}
+
+			.btn:hover {
+				opacity: 0.9;
+			}
+		</style>
+	</head>
 	<body>
-		<h1>Astro + WCC</h1>
-    <x-greeting></x-greeting>
-    <x-greeting name="WCC"></x-greeting>
+		<main>
+			<h1>Astro + WCC</h1>
+			<p class="subtitle">The ultimate starter kit for Web Components in Astro.</p>
+
+			<div class="grid">
+				<div class="card">
+					<h2>🚀 Blazing Fast</h2>
+					<p>Zero JavaScript runtime by default. Use WCC to pre-render your components.</p>
+				</div>
+				<div class="card">
+					<h2>🧩 Web Components</h2>
+					<p>Build with standard Web Components. No framework lock-in.</p>
+				</div>
+				<div class="card">
+					<h2>🎨 Modern UI</h2>
+					<p>Styled with scoped CSS for a clean and professional look.</p>
+				</div>
+			</div>
+
+			<a href="https://github.com/thescientist13/astro-wcc" class="btn">View Documentation</a>
+		</main>
 	</body>
 </html>
