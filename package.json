@@ -17,7 +17,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@projectevergreen/astro-wcc": "~0.2.0",
+    "@projectevergreen/astro-wcc": "~0.2.1",
     "astro": "^5.16.6"
   }
 }
