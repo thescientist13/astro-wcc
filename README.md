@@ -1,6 +1,6 @@
 # astro-wcc
 
-A demonstration repo for using [Astro](https://astro.build/) and [WCC](https://github.com/ProjectEvergreen/wcc) together.
+A demonstration repo for using [Astro](https://astro.build/) and [WCC](https://www.wcc.dev) together.
 
 ## Caveats
 
